@@ -54,7 +54,7 @@ pipeline {
         GITOPS_REPO_URL = 'https://${{values.gitlabHost}}/${{values.destination}}-gitops'
 {%- if values.verifyCommits == 'enabled' %}
         TUF_MIRROR = 'http://tuf.tssc-tas.svc'
-        KEYCLOAK_ISSUER_URL = 'https://${{values.ssoHost}}/realms/trusted-artifact-signer'
+        KEYCLOAK_ISSUER_URL = 'https://${{values.ssoHost}}/realms/tssc-iam'
 {%- endif %}
     }
     stages {
