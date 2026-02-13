@@ -144,6 +144,7 @@ pipeline {
         stage('acs') {
             environment {
                 INSECURE_SKIP_TLS_VERIFY = 'true'
+                GRPC_ENFORCE_ALPN_ENABLED = 'false'
             }
             parallel {
                 stage('acs_deploy_check') {
